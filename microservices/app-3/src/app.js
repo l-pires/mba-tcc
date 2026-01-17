@@ -12,7 +12,7 @@ app.use(morgan('dev'));
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'api-1 running...',
+    message: 'api-3 running...',
   });
 });
 
