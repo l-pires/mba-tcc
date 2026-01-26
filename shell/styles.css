@@ -1,0 +1,28 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: #111;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#app {
+  padding: 1rem;
+}
+
+.loading {
+  opacity: 0.6;
+}
+
+.error {
+  color: #b00020;
+}
