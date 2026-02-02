@@ -1,0 +1,6 @@
+{
+  "conteudo": [
+    "A abordagem dos microfrontends permite a verdadeira verticalização de equipes multidisciplinares no desenvolvimento de um produto de software de ponta a ponta, desde o gerenciamento de dados até a apresentação em interface de usuário, em componentes de uma aplicação maior. Existem também novos pontos de atenção relacionadas à esta arquitetura, como a orquestração dos componentes, gerenciamento de rotas, consistência de interface do usuário e gerenciamento de dependências utilizadas por múltiplos componentes (Pavlenko et al., 2020).",
+    "Apesar da escalada em complexidade, a separação dos componentes e o isolamento de código-fonte culmina em agilidade na entrega, alinhado aos conceitos de entrega contínua e integração contínua. Entretanto, na escolha de implementação desta arquitetura em um projeto, existem lacunas de decisões de arquitetura de software que devem ser preenchidas, principalmente no que se refere à integração do backend e frontend, agora implementados em microsserviços e microfrontends."
+  ]
+}

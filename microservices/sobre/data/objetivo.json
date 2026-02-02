@@ -1,0 +1,5 @@
+{
+  "conteudo": [
+    "Neste trabalho serão abordadas duas maneiras de integração entre microfrontends e microsserviços, uma utilizando componentes de agregação para cada microfrontend, em outras palavras, um BFF para cada componente do frontend e outra com requisições respeitando os contratos de API dos microsserviços com chamadas diretas ao API Gateway, para realizar um comparativo da complexidade de software da aplicação e a experiência no desenvolvimento."
+  ]
+}

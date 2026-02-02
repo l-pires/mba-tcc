@@ -1,0 +1,26 @@
+[
+  {
+    "entrega": "Projeto de pesquisa",
+    "data": "2025-11",
+    "concluido": true,
+    "em_andamento": false
+  },
+  {
+    "entrega": "Resultados preliminares",
+    "data": "2026-02",
+    "concluido": false,
+    "em_andamento": true
+  },
+  {
+    "entrega": "Documento finalizado",
+    "data": "2026-04",
+    "concluido": false,
+    "em_andamento": false
+  },
+  {
+    "entrega": "Defesa",
+    "data": "2026-06",
+    "concluido": false,
+    "em_andamento": false
+  }
+]
