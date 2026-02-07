@@ -1,4 +1,5 @@
 import { registry, notFound } from "./mf-registry.js";
+import env from "./env.js";
 
 export class Router {
   constructor({ outlet, onBeforeLoad, onAfterLoad, onError }) {
@@ -43,7 +44,7 @@ export class Router {
         unmount: mod.unmount || (() => {}),
       };
 
-      await this.currentMf.render(this.outlet, { path });
+      await this.currentMf.render(this.outlet, { path, env });
 
       this.onAfterLoad(path);
     } catch (err) {

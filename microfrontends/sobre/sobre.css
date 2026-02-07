@@ -1,24 +1,24 @@
-.mfe-home-section {
+.mfe-sobre-section {
   max-width: 50rem;
   margin: 0 auto;
   padding: 2.5rem 1.25rem;
 }
 
-.mfe-home-section .mfe-home-title-h2 {
+.mfe-sobre-section .mfe-sobre-title-h2 {
   font-size: 1.75rem;
   color: #333;
   margin: 0 0 0.625rem 0;
   text-align: center;
 }
 
-.mfe-home-section .mfe-home-title-h3 {
+.mfe-sobre-section .mfe-sobre-title-h3 {
   font-size: 1.25rem;
   color: #666;
   margin: 0 0 1.875rem 0;
   text-align: center;
 }
 
-.mfe-home-section .mfe-home-title-h4 {
+.mfe-sobre-section .mfe-sobre-title-h4 {
   font-size: 1.125rem;
   color: #333;
   margin: 1.875rem 0 0.9375rem 0;
@@ -26,7 +26,7 @@
   border-bottom: 0.125rem solid #f0f0f0;
 }
 
-.mfe-home-section .mfe-home-paragraph {
+.mfe-sobre-section .mfe-sobre-paragraph {
   font-size: 1rem;
   line-height: 1.6;
   color: #555;
@@ -34,10 +34,10 @@
   text-align: justify;
 }
 
-.mfe-home-section .mfe-home-anchor-link {
+.mfe-sobre-section .mfe-sobre-anchor-link {
   display: inline-block;
-  margin-top: 0.625rem;
   width: 100%;
+  margin-top: 0.625rem;
   padding: 0.625rem 1rem;
   background: #2196f3;
   color: white;
@@ -48,29 +48,7 @@
   text-align: center;
 }
 
-.mfe-home-section .mfe-home-anchor-link:hover {
+.mfe-sobre-section .mfe-sobre-anchor-link:hover {
   background: #1976d2;
   box-shadow: 0 0.125rem 0.5rem rgba(33, 150, 243, 0.3);
-}
-
-.mfe-home-error-card {
-  width: 100%;
-  margin-top: 1.5rem;
-  padding: 1rem;
-  background: #fff3f2;
-  border: 0.0625rem solid #ffccd5;
-  border-left: 0.25rem solid #ff6b6b;
-  border-radius: 0.5rem;
-  color: #6b1e1e;
-  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.04);
-}
-
-.mfe-home-error-card .mfe-home-title-h4 {
-  margin: 0 0 0.5rem 0;
-  color: #521212;
-}
-
-.mfe-home-error-card .mfe-home-paragraph {
-  margin: 0;
-  color: #5c2b2b;
 }
