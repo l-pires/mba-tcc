@@ -1,0 +1,10 @@
+{
+  "titulo": "Comunicação de Microfrontends e Microsserviços: Comparativo entre BFF e API Gateway",
+  "curso": "MBA em Engenharia de Software",
+  "recursos": [
+    "/intro",
+    "/contexto",
+    "/objetivo",
+    "/estrutura"
+  ]
+}

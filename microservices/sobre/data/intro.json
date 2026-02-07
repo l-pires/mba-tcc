@@ -1,0 +1,5 @@
+{
+  "conteudo": [
+    "Esta aplicação é uma demonstração desenvolvida para o trabalho de conclusão do curso de MBA em Engenharia de Software. A estrutura base consiste na interface que está dividida em aplicações microfrontends e o backend em microsserviços. O objeto de estudo está na comunicação entre os elementos da estrutura base através de uma camada de integração."
+  ]
+}

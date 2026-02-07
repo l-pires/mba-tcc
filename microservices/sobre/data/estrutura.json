@@ -1,0 +1,17 @@
+{
+  "conteudo": [
+    {
+      "titulo": "PoC 1 - Integração via BFF",
+      "texto": [
+        "A primeira prova de conceito implementa a camada de agregação com instâncias BFF de acordo com a necessidade de cada componente em microfrontend. O BFF faz a agregação dos microsserviços utilizados pelo componente relacionado e disponibiliza as funcionalidades em um endereço único.",
+        "No caso em que o microfrontend dependa apenas de um microsserviço, não é necessária a implementação da camada de integração e a comunicação pode ser realizada de maneira direta. O BFF pode ainda fazer adaptação dos dados considerando as necessidades específicas do componente, que nesta implementação se resume a omitir campos não utilizados de modo que não altere a implementação do microfrontend."
+      ]
+    },
+    {
+      "titulo": "PoC 2 - Integração via API Gateway",
+      "texto": [
+        "Na segunda prova de conceito a comunicação entre os componentes do frontend e os microsserviços é redirecionada pelo componente API Gateway, que na implementação serve como um proxy e apenas redireciona a chamada ao componente correto e devolve a resposta da API sem alterações. Em arquiteturas mais robustas, este componente pode absorver outras responsabilidades como autenticação e controle do limite de requisições."
+      ]
+    }
+  ]
+}
