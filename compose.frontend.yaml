@@ -1,0 +1,34 @@
+services:
+  shell:
+    build: ./shell
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - MFE_HOST_HOME=http://localhost:4001
+      - MFE_HOST_MARCOS=http://localhost:4002
+      - MFE_HOST_SOBRE=http://localhost:4000
+      - API_HOST_HOME=http://localhost:3000
+      - API_HOST_MARCOS=http://localhost:3000
+      - API_HOST_SOBRE=http://localhost:3000
+
+  mfe-home:
+    build: ./microfrontends/home
+    ports:
+      - "4001:4001"
+    environment:
+      - PORT=4001
+  
+  mfe-marcos:
+    build: ./microfrontends/marcos
+    ports:
+      - "4002:4002"
+    environment:
+      - PORT=4002
+
+  mfe-sobre:
+    build: ./microfrontends/sobre
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000

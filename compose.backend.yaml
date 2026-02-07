@@ -1,0 +1,55 @@
+services:
+
+  api-sobre:
+    build: ./microservices/sobre
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+
+  api-marcos:
+    build: ./microservices/linha-do-tempo
+    ports:
+      - "3002:3002"
+    environment:
+      - PORT=3002
+
+  api-contatos:
+    build: ./microservices/contato
+    ports:
+      - "3003:3003"
+    environment:
+      - PORT=3003
+  
+  gateway:
+    build: ./integration
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - API_HOST_SOBRE=http://api-sobre:3001
+      - API_HOST_MARCOS=http://api-marcos:3002
+      - API_HOST_CONTATOS=http://api-contatos:3003
+      - REDIS_URL=redis://gateway-redis:6379
+      - CACHE_ENABLED=true
+      - CACHE_TTL=300
+    depends_on:
+      - api-sobre
+      - api-marcos
+      - api-contatos
+      - gateway-redis
+
+  gateway-redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  redis_data:
