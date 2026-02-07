@@ -1,7 +1,7 @@
 FROM node:22-alpine
 
 WORKDIR /app
-COPY src/ .
+COPY . .
 RUN npm install -g http-server
 
 ENV PORT=4001
