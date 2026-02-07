@@ -6,7 +6,6 @@ const router = new Router({
   outlet,
   onBeforeLoad: (path) => {
     outlet.classList.add("loading");
-    outlet.innerHTML = `<p>Loading ${path}...</p>`;
   },
   onAfterLoad: () => {
     outlet.classList.remove("loading");

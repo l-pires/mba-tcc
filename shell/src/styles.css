@@ -3,24 +3,72 @@ body {
   margin: 0;
 }
 
-.nav {
+.shell-nav {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 1rem;
-  padding: 1rem;
-  background: #111;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(90deg,#0f1724,#111827);
+  color: #fff;
 }
 
-.nav a {
-  color: #fff;
+.shell-nav a {
+  color: #e6eef8;
   text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.375rem;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.shell-nav a:hover {
+  background: rgba(255,255,255,0.04);
+  color: #fff;
+}
+
+.shell-nav-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-right: 1rem;
+}
+
+.shell-nav-links {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 #app {
   padding: 1rem;
+  position: relative;
 }
 
-.loading {
-  opacity: 0.6;
+#app.loading > * { 
+  visibility: hidden;
+}
+
+#app.loading::after {
+  content: "";
+  position: fixed; 
+  
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  
+  width: 5rem;
+  height: 5rem;
+  border: .5rem solid #2196f3;
+  border-top: .5rem solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  
+  z-index: 1; 
+}
+
+@keyframes spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 .error {
