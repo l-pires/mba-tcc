@@ -29,8 +29,9 @@ router.use(async (req, res, next) => {
   return next();
 });
 
-async function cacheAndProxyResponse(proxyRequest, proxyResponse, apiResponse) {
+async function cacheAndProxyResponse(proxyRequest, proxyResponse, apiResponse, adapterFunction) {
   const data = await apiResponse.json();
+  if (adapterFunction) adapterFunction(data);
 
   proxyResponse.set('X-Cache', 'MISS');
   setCached(cacheKey(proxyRequest), data, ttlSeconds).catch((e) => console.error('setCached error', e));
@@ -41,7 +42,9 @@ async function cacheAndProxyResponse(proxyRequest, proxyResponse, apiResponse) {
 
 router.get('/api/v1/sobre', async (req, res) => {
   const apiResponse = await fetch(`${process.env.API_HOST_SOBRE}/api/v1/sobre`);
-  cacheAndProxyResponse(req, res, apiResponse);
+  cacheAndProxyResponse(req, res, apiResponse, (data) => {
+    delete data.recursos;
+  });
 });
 
 router.get('/api/v1/sobre/intro', async (req, res) => {
