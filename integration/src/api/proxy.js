@@ -2,9 +2,7 @@ import { createProxyMiddleware } from 'http-proxy-middleware';
 import { getCached, setCached } from './cache.js';
 
 
-function cacheKey(req) {
-  return `${req.method}:${req.originalUrl}`;
-}
+const cacheKey = (req) => `${req.method}:${req.originalUrl}`;
 
 export async function cacheMiddlewareBefore(req, res, next) {
   if (req.method !== 'GET') return next();
