@@ -4,7 +4,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node --env-file=.env src/index.js",
-    "dev": "node --watch --env-file=.env src/index.js"
+    "dev": "node --watch --env-file=.env src/index.js",
+    "analyse": "npx code-health-meter --srcDir src --outputDir report --format html"
   },
   "author": "",
   "license": "ISC",
