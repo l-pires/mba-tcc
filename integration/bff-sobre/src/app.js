@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 
-import api from './api/index.js';
+import api from './api/main.js';
 import { notFound, errorHandler, createRateLimiter } from './middlewares.js';
 
 
